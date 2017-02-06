@@ -8,19 +8,9 @@ class App extends Component {
 
   state = {
     todos: [
-      {
-        id: 1,
-        name: 'Learn JSX',
-        isComplete: true
-      }, {
-        id: 2,
-        name: 'Build an awesome app',
-        isComplete: false
-      }, {
-        id: 3,
-        name: 'Ship It!',
-        isComplete: false
-      }
+      {id: 1, name: 'Learn JSX', isComplete: true},
+      {id: 2, name: 'Build an awesome app', isComplete: false},
+      {id: 3, name: 'Ship It!', isComplete: false}
     ],
     currentTodo: ''
   }
@@ -62,8 +52,8 @@ class App extends Component {
         <div className="Todo-App">
           {this.state.errorMessage && <span className='error'>{this.state.errorMessage}</span>}
           <TodoForm handleInputChange={this.handleInputChange}
-            currentTodo={this.state.currentTodo}
-            handleSubmit={submitHandler}/>
+                    currentTodo={this.state.currentTodo}
+                    handleSubmit={submitHandler}/>
           <TodoList todos={this.state.todos}/>
         </div>
       </div>
